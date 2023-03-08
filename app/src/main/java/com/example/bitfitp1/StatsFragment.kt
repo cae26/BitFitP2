@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 
 private const val TAG = "FoodListFragment"
 
-class FoodFragment: Fragment() {
+class StatsFragment: Fragment() {
 
 
     private val foods = mutableListOf<DisplayFood>()
@@ -58,8 +58,8 @@ class FoodFragment: Fragment() {
 
     companion object {
 
-        fun newInstance(): FoodFragment {
-            return FoodFragment()
+        fun newInstance(): StatsFragment {
+            return StatsFragment()
         }
     }
 

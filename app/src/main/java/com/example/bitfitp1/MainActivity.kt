@@ -5,17 +5,8 @@ import android.view.LayoutInflater
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 //import com.example.bitfitp1.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
-import okhttp3.Headers
-import org.json.JSONException
 
 private const val TAG = "MainActivity"
 
@@ -65,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         val addNewFButton = findViewById<Button>(R.id.button2)
 
         val addFoodFragment: Fragment = FoodListFragment()
-        val foodListFragment: Fragment = FoodFragment()
+        val foodListFragment: Fragment = StatsFragment()
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
         bottomNavigationView.setOnItemSelectedListener { item ->

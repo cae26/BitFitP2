@@ -37,15 +37,13 @@ class FoodListFragment : Fragment(){
 
         return view
     }
-    companion object {
 
-        fun newInstance(): FoodListFragment{
-            return FoodListFragment()
-        }
-
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fetchFoodList()
+
+    }
+    private fun fetchFoodList() {
         lifecycleScope.launch {
             (activity?.application as FoodApplication).db.FoodDao().getAll().collect{ databaseList ->
                 databaseList.map {entity ->
@@ -55,16 +53,25 @@ class FoodListFragment : Fragment(){
 
                     )
                 }.also { mappedList ->
-//                    foods.clear()
+                    foods.clear()
                     foods.addAll(mappedList)
                     foodAdapter.notifyDataSetChanged()
                 }
             }
 
         }
+
+
+
     }
 
+    companion object {
 
+        fun newInstance(): FoodListFragment{
+            return FoodListFragment()
+        }
+
+    }
 
 
 }
