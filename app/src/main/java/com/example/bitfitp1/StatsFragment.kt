@@ -56,12 +56,7 @@ class StatsFragment: Fragment() {
 
 
 
-    companion object {
 
-        fun newInstance(): StatsFragment {
-            return StatsFragment()
-        }
-    }
 
     private fun fetchAvg(){
         lifecycleScope.launch(IO) {
@@ -78,7 +73,12 @@ class StatsFragment: Fragment() {
         // Call the new method within onViewCreated
         fetchAvg()
     }
+    companion object {
 
+        fun newInstance(): StatsFragment {
+            return StatsFragment()
+        }
+    }
 
 
 }
