@@ -9,9 +9,11 @@
         android:id="@+id/fooditemView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
         android:text="TextView"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,19 +21,19 @@
         android:id="@+id/caloriesItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="5dp"
         android:text="calories"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/caloriesitemView"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesitemView" />
 
     <TextView
         android:id="@+id/caloriesitemView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="59dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/caloriesItemText"
-        app:layout_constraintStart_toStartOf="@+id/caloriesItemText" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

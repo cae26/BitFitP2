@@ -23,4 +23,12 @@ interface FoodDao  {
 
     @Query("DELETE FROM food_table")
     fun deleteAll()
+
+
+    @Query("SELECT MAX(numberOfCalories) FROM food_table")
+    fun max():Int
+    @Query("SELECT MIN(numberOfCalories) FROM food_table")
+    fun min() :Int
+    @Query("SELECT AVG(numberOfCalories) FROM food_table")
+    fun avg() :Int
 }
