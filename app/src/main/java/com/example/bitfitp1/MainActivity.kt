@@ -55,15 +55,15 @@ class MainActivity : AppCompatActivity() {
 //        }
         val addNewFButton = findViewById<Button>(R.id.button2)
 
-        val addFoodFragment: Fragment = FoodListFragment()
-        val foodListFragment: Fragment = StatsFragment()
+        //val addFoodFragment: Fragment = FoodListFragment()
+        //val foodListFragment: Fragment = StatsFragment()
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             lateinit var fragment: Fragment
             when (item.itemId) {
-                R.id.nav_stats -> fragment =  foodListFragment
-                R.id.nav_log -> fragment =addFoodFragment
+                R.id.nav_stats -> fragment =  StatsFragment()
+                R.id.nav_log -> fragment =FoodListFragment()
             }
             replaceFragment(fragment)
             true
